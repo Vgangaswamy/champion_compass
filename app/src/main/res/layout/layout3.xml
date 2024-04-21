@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+<ImageView
+        android:id="@+id/topDecoration"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="-64dp"
+        android:layout_marginBottom="625dp"
+        android:background="@drawable/top_rectangle_layout2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="562dp"
+        android:background="@drawable/login_gradient"
+        android:fontFamily="@font/font4"
+        android:shadowColor="#000000"
+        android:text="     LOG IN"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/button_decoration"
+        android:layout_width="299dp"
+        android:layout_height="255dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="296dp"
+        android:background="@drawable/buttondecoration_rectangle" />
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignStart="@+id/button_decoration"
+        android:layout_alignEnd="@+id/button_decoration"
+        android:layout_alignBottom="@+id/button_decoration"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="181dp"
+        android:background="@drawable/edit_text_outline"
+        android:ems="10"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:fontFamily="@font/font4"
+        android:inputType="textPersonName|number"
+        android:text="         Username"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignStart="@+id/button_decoration"
+        android:layout_alignEnd="@+id/button_decoration"
+        android:layout_alignBottom="@+id/button_decoration"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="102dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:background="@drawable/edit_text_outline"
+        android:ems="10"
+        android:fontFamily="@font/font4"
+        android:inputType="textPersonName|number"
+        android:text="         Password"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button_decoration"
+        android:layout_alignEnd="@+id/button_decoration"
+        android:layout_alignBottom="@+id/button_decoration"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/font1"
+        android:text="SUBMIT"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/color1"
+        app:cornerRadius="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="345dp"
+        android:layout_height="213dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-399dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="86dp"
+        app:srcCompat="@drawable/challenger1" />
+
+    <ImageView
+        android:id="@+id/bottomDecoration"
+        android:layout_width="395dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="-44dp"
+        android:background="@drawable/bottom_rectangle_layout2" />
+
+</RelativeLayout>
