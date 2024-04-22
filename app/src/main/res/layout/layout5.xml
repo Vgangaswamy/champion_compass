@@ -60,7 +60,7 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="Introduction and Objectives"
+        android:text="@string/intro_objectives"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/color1" />
@@ -95,7 +95,7 @@
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="1.5"
-        android:text="Welcome to Champion Compass."
+        android:text="@string/welcome_message"
         android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="bold" />
@@ -113,7 +113,7 @@
         android:fontFamily="@font/font1"
         android:gravity="center"
         android:lineSpacingExtra="4dp"
-        android:text="Let's dive into Introduction and Objectives before we head to the Quiz."
+        android:text="@string/message"
         android:textColor="@color/white"
         android:textSize="14sp" />
 

@@ -92,32 +92,31 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="         Password"
+        android:hint="         Password"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText_confirm_password"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/button_decoration"
         android:layout_alignEnd="@+id/button_decoration"
         android:layout_alignBottom="@+id/button_decoration"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="226dp"
-        android:background="@drawable/edit_text_outline"
-        android:ems="10"
-        android:fontFamily="@font/font4"
-        android:inputType="textPersonName|number"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="229dp"
+        android:fontFamily="@font/font1"
         android:shadowColor="#000000"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="  "
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
+        android:text="@string/google_signup"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/color1"
+        app:cornerRadius="8dp" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -146,7 +145,7 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="SUBMIT"
+        android:text="@string/submit"
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@color/color1"

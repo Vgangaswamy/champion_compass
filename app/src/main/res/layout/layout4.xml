@@ -70,7 +70,7 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="         Username"
+        android:hint="             E-mail"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
@@ -92,7 +92,7 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="         Password"
+        android:hint="         Password"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="SUBMIT"
+        android:text="@string/submit"
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@color/color1"

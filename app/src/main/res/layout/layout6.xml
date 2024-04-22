@@ -5,34 +5,202 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="0dp"
+        app:srcCompat="@drawable/intro_top_deco" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView13"
+        android:layout_below="@id/imageView12"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_1"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textViewExplanation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_2"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation2"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="258dp"
+                app:srcCompat="@drawable/rift" />
+
+            <TextView
+                android:id="@+id/textViewExplanation3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_1"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation3"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textViewExplanation4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_2"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation4"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/textViewExplanation5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_1"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation5"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/textViewExplanation6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_2"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation6"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/textViewExplanation7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_1"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation7"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/textViewExplanation8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/explanation_2"
+                android:fontFamily="@font/font4"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="@string/explanation8"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font1"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1.5"
+                android:text="QUIZ"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/color1"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <ImageView
-        android:id="@+id/topDecoration"
-        android:layout_width="477dp"
-        android:layout_height="193dp"
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="-80dp"
-        android:layout_marginEnd="-118dp"
-        android:layout_marginBottom="609dp"
-        android:background="@drawable/top_rectangle_layout2" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="188dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/font1"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:text="QUIZ"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/color1"
-        app:cornerRadius="8dp" />
-
-
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-80dp"
+        app:srcCompat="@drawable/intro_bottom_deco" />
 </RelativeLayout>
+

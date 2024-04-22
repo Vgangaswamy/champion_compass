@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 5000); // milliseconds delay
     }
+
     public void createSignInIntent() {
         // [START auth_fui_create_intent]
         // Choose authentication providers
