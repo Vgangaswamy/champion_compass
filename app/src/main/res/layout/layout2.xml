@@ -7,40 +7,30 @@
 
     <ImageView
         android:id="@+id/topDecoration"
-        android:layout_width="wrap_content"
-        android:layout_height="155dp"
+        android:layout_width="477dp"
+        android:layout_height="193dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="-60dp"
-        android:layout_marginEnd="-66dp"
-        android:layout_marginBottom="628dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-118dp"
+        android:layout_marginBottom="609dp"
         android:background="@drawable/top_rectangle_layout2" />
+
 
     <ImageView
         android:id="@+id/button_decoration"
         android:layout_width="299dp"
-        android:layout_height="255dp"
+        android:layout_height="195dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="59dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="400dp"
         android:background="@drawable/buttondecoration_rectangle" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="318dp"
-        android:layout_height="198dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="-399dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="130dp"
-        app:srcCompat="@drawable/img" />
 
     <Button
         android:id="@+id/button1"
@@ -49,15 +39,15 @@
         android:layout_alignStart="@+id/button_decoration"
         android:layout_alignEnd="@+id/button_decoration"
         android:layout_alignBottom="@+id/button_decoration"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="112dp"
         android:fontFamily="@font/font1"
         android:shadowColor="#000000"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1.5"
-        android:text="Sign up with Google"
+        android:text="Register?"
         android:textSize="14sp"
         android:textStyle="bold"
         app:backgroundTint="@color/color1"
@@ -70,8 +60,8 @@
         android:layout_alignStart="@+id/button_decoration"
         android:layout_alignTop="@+id/button_decoration"
         android:layout_alignEnd="@+id/button_decoration"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="134dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="106dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="@font/font1"
         android:shadowColor="#000000"
@@ -84,16 +74,47 @@
         app:backgroundTint="@color/color1" />
 
     <ImageView
-        android:id="@+id/bottomDecoration"
-        android:layout_width="395dp"
-        android:layout_height="150dp"
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="287dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-39dp"
+        android:layout_marginStart="-87dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="117dp"
+        app:srcCompat="@drawable/lux" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="103dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="187dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="313dp"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="Are you ready player?"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/bottomDecoration"
+        android:layout_width="454dp"
+        android:layout_height="201dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-92dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="-41dp"
+        android:layout_marginBottom="-80dp"
         android:background="@drawable/bottom_rectangle_layout2" />
+
+
 
 </RelativeLayout>
