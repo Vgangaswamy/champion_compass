@@ -26,21 +26,20 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="103dp"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="139dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="142dp"
             android:background="@drawable/buttondecoration_rectangle"/>
-
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="43dp"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:hint="@string/mail"
             android:fontFamily="@font/font1"
             android:ems="10"
             android:id="@+id/editTextEmail"
-            android:layout_marginEnd="39dp"
+            android:layout_marginEnd="30dp"
             android:layout_alignEnd="@+id/button_decoration"
             android:layout_marginBottom="243dp"
             android:layout_alignBottom="@+id/button_decoration"
@@ -52,16 +51,16 @@
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="43dp"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="@string/pswd"
             android:fontFamily="@font/font1"
             android:ems="10"
             android:id="@+id/editTextPassword"
-            android:layout_marginEnd="41dp"
+            android:layout_marginEnd="30dp"
             android:layout_alignEnd="@+id/button_decoration"
             android:layout_marginBottom="183dp"
             android:layout_alignBottom="@+id/button_decoration"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="30dp"
             android:background="@drawable/edit_text_outline"
             android:layout_alignStart="@+id/button_decoration"/>
 
@@ -73,9 +72,9 @@
             android:layout_alignStart="@+id/button_decoration"
             android:layout_alignEnd="@+id/button_decoration"
             android:layout_alignBottom="@+id/button_decoration"
-            android:layout_marginStart="21dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="124dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="125dp"
             android:fontFamily="@font/font1"
             android:shadowColor="#000000"
             android:shadowDx="1"
@@ -88,6 +87,23 @@
             app:cornerRadius="8dp"/>
 
 
+    <TextView
+            android:text="@string/or"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_marginEnd="25dp"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_marginStart="25dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_alignStart="@+id/button_decoration"
+            android:layout_marginBottom="90dp"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/button_decoration"/>
+
+
+
     <Button
             android:id="@+id/buttonSignIn"
             android:layout_width="229dp"
@@ -96,7 +112,7 @@
             android:layout_alignEnd="@+id/button_decoration"
             android:layout_alignBottom="@+id/button_decoration"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="27dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="26dp"
             android:fontFamily="@font/font1"
             android:shadowColor="#000000"
@@ -112,16 +128,15 @@
 
     <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="220dp"
-            android:layout_height="222dp"
+            android:layout_width="256dp"
+            android:layout_height="224dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="58dp"
-            android:layout_marginEnd="134dp"
-            android:layout_marginBottom="525dp"
+            android:layout_marginStart="61dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="478dp"
             app:srcCompat="@drawable/are_you_ready_player"/>
-
     <ImageView
         android:id="@+id/bottomDecoration"
         android:layout_width="454dp"
@@ -137,14 +152,14 @@
 
     <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="392dp"
-            android:layout_height="286dp"
+            android:layout_width="396dp"
+            android:layout_height="291dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="-85dp"
-            android:layout_marginEnd="104dp"
-            android:layout_marginBottom="338dp"
+            android:layout_marginStart="-92dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="345dp"
             app:srcCompat="@drawable/lux"/>
 
 

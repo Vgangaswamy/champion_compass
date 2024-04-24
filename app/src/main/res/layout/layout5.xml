@@ -62,6 +62,7 @@
         android:shadowRadius="1.5"
         android:text="@string/intro_objectives"
         android:textSize="16sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:backgroundTint="@color/color1" />
 
