@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/topDecoration"
+        android:layout_width="477dp"
+        android:layout_height="193dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-119dp"
+        android:layout_marginBottom="609dp"
+        android:background="@drawable/top_rectangle_layout2" />
+
+    <TextView
+        android:id="@+id/loginView"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="554dp"
+        android:background="@drawable/login_gradient"
+        android:fontFamily="@font/font1"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="     SIGN IN"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+            android:id="@+id/button_decoration"
+            android:layout_width="wrap_content"
+            android:layout_height="266dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="271dp"
+            android:background="@drawable/buttondecoration_rectangle"/>
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Email"
+            android:ems="10"
+            android:id="@+id/editTextText2"
+            android:layout_marginEnd="53dp"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_marginStart="50dp"
+            android:layout_alignStart="@+id/button_decoration"
+            android:layout_marginBottom="195dp"
+            android:background="@drawable/edit_text_outline"
+            android:layout_alignBottom="@+id/button_decoration"/>
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="password"
+            android:ems="10"
+            android:id="@+id/passworEditText"
+            android:layout_marginEnd="52dp"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_marginBottom="137dp"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="51dp"
+            android:background="@drawable/edit_text_outline"
+            android:layout_alignStart="@+id/button_decoration"/>
+
+
+    <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button_decoration"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="39dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/font1"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:text="@string/sign_in"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/color1"
+            app:cornerRadius="8dp"/>
+    <Button
+            android:id="@+id/button007"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button_decoration"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="78dp"
+            android:fontFamily="@font/font1"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:text="@string/submit"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/color1"
+            app:cornerRadius="8dp"/>
+    <ImageView
+        android:id="@+id/bottomDecoration"
+        android:layout_width="454dp"
+        android:layout_height="201dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-92dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/bottom_rectangle_layout2" />
+
+</RelativeLayout>

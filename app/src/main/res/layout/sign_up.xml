@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/topDecoration"
+        android:layout_width="477dp"
+        android:layout_height="193dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-118dp"
+        android:layout_marginBottom="609dp"
+        android:background="@drawable/top_rectangle_layout2" />
+
+
+    <ImageView
+            android:id="@+id/button_decoration"
+            android:layout_width="276dp"
+            android:layout_height="302dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="103dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="139dp"
+            android:background="@drawable/buttondecoration_rectangle"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:inputType="text"
+            android:hint="@string/mail"
+            android:fontFamily="@font/font1"
+            android:ems="10"
+            android:id="@+id/editTextEmail"
+            android:layout_marginEnd="39dp"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_marginBottom="243dp"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/edit_text_outline"
+            android:layout_alignStart="@+id/button_decoration"/>
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:inputType="text"
+            android:hint="@string/pswd"
+            android:fontFamily="@font/font1"
+            android:ems="10"
+            android:id="@+id/editTextPassword"
+            android:layout_marginEnd="41dp"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_marginBottom="183dp"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/edit_text_outline"
+            android:layout_alignStart="@+id/button_decoration"/>
+
+
+    <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button_decoration"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="124dp"
+            android:fontFamily="@font/font1"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:text="@string/sign_up"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/color1"
+            app:cornerRadius="8dp"/>
+
+
+    <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button_decoration"
+            android:layout_alignEnd="@+id/button_decoration"
+            android:layout_alignBottom="@+id/button_decoration"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="26dp"
+            android:fontFamily="@font/font1"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:text="@string/asi"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/color1"
+            app:cornerRadius="8dp"/>
+
+
+    <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="220dp"
+            android:layout_height="222dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="134dp"
+            android:layout_marginBottom="525dp"
+            app:srcCompat="@drawable/are_you_ready_player"/>
+
+    <ImageView
+        android:id="@+id/bottomDecoration"
+        android:layout_width="454dp"
+        android:layout_height="201dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-92dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/bottom_rectangle_layout2" />
+
+    <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="392dp"
+            android:layout_height="286dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-85dp"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="338dp"
+            app:srcCompat="@drawable/lux"/>
+
+
+</RelativeLayout>

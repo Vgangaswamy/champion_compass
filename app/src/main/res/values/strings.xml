@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">champion_compass</string>
-    <string name="register">REGISTER?</string>
-    <string name="already_signed_in">ALREADY SIGNED IN?</string>
+    <string name="sign_up">SIGN UP?</string>
     <string name="google_signup">SIGN UP WITH GOOGLE?</string>
     <string name="welcome_message">Welcome to Champion Compass.</string>
     <string name="message">Let\'s dive into Introduction and Objectives before we head to the Quiz.</string>
     <string name="intro_objectives">Introduction and Objectives</string>
     <string name="submit">SUBMIT</string>
+    <string name="mail">E-mail</string>
+    <string name="pswd">Password</string>
+    <string name="asi">Already signed up?</string>
+    <string name="sign_in">sign in with google?</string>
     <string name="explanation1">League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other’s base. You get to choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.</string>
     <string name="explanation2">140+? that\'s a lot!!. I know and I am here to help you :). I have curated about 5 champions for each lane in summoner\'s rift. Let\'s first discuss the lanes so we can determine which one is the best fit for you!</string>
     <string name="explanation3">-------------Top lane:------------- It\'s primarily for tanky or durable champions known as top laners who excel at solo survival and one-on-one combat.</string>
