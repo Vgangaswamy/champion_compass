@@ -15,31 +15,30 @@
         android:layout_marginStart="53dp"
         android:layout_marginTop="-80dp"
         android:layout_marginEnd="-119dp"
-        android:layout_marginBottom="609dp"
+        android:layout_marginBottom="629dp"
         android:background="@drawable/top_rectangle_layout2" />
 
+
     <TextView
-        android:id="@+id/loginView"
-        android:layout_width="140dp"
-        android:layout_height="42dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="554dp"
-        android:background="@drawable/login_gradient"
-        android:fontFamily="@font/font1"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1.5"
-        android:text="     SIGN IN"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-
+            android:id="@+id/loginView"
+            android:layout_width="140dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="560dp"
+            android:background="@drawable/login_gradient"
+            android:fontFamily="@font/font1"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:text="     SIGN IN"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
     <ImageView
             android:id="@+id/button_decoration"
             android:layout_width="wrap_content"
@@ -53,6 +52,18 @@
             android:layout_marginBottom="280dp"
             android:background="@drawable/buttondecoration_rectangle"/>
 
+    <ImageView
+
+            android:layout_width="321dp"
+            android:layout_height="278dp"
+            android:id="@+id/imageView15"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="41dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="275dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/explanation_2"
+            android:layout_marginStart="41dp"/>
     <ImageView
             android:id="@+id/imageView5"
             android:layout_width="282dp"
@@ -173,7 +184,7 @@
         android:layout_marginStart="-92dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="-80dp"
+        android:layout_marginBottom="-90dp"
         android:background="@drawable/bottom_rectangle_layout2" />
 
 </RelativeLayout>

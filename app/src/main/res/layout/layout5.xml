@@ -15,7 +15,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="-80dp"
         android:layout_marginEnd="-118dp"
-        android:layout_marginBottom="609dp"
+        android:layout_marginBottom="629dp"
         android:background="@drawable/top_rectangle_layout2" />
 
     <ImageView
@@ -28,24 +28,35 @@
         android:layout_marginStart="-92dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="-80dp"
+        android:layout_marginBottom="-90dp"
         android:background="@drawable/bottom_rectangle_layout2" />
 
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="468dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="150dp"
-        android:background="@drawable/buttondecoration_rectangle" />
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="441dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/buttondecoration_rectangle"/>
 
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="460dp"
+            android:background="@drawable/explanation_2"
+            android:id="@+id/imageView16"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="19dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="141dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="19dp"/>
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
@@ -67,19 +78,18 @@
         app:backgroundTint="@color/color1" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="154dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="166dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="411dp"
-        android:background="@drawable/welcome_rectangle" />
-
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="154dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="427dp"
+            android:background="@drawable/welcome_rectangle"/>
     <TextView
         android:id="@+id/textView3"
         android:layout_width="201dp"
@@ -119,15 +129,15 @@
         android:textSize="14sp" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="192dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="218dp"
-        app:srcCompat="@drawable/poro2" />
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="213dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="218dp"
+            app:srcCompat="@drawable/poro2"/>
 
 </RelativeLayout>

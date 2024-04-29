@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">champion_compass</string>
-    <string name="sign_up">SIGN UP?</string>
+    <string name="sign_up"> SIGN UP</string>
     <string name="google_signup">SIGN UP WITH GOOGLE?</string>
     <string name="welcome_message">Welcome to Champion Compass.</string>
     <string name="message">Let\'s dive into Introduction and Objectives before we head to the Quiz.</string>

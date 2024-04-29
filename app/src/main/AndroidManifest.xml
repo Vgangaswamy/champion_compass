@@ -39,6 +39,10 @@
                 android:name=".intro_obj_activity"
                 android:exported="true">
         </activity>
+        <activity
+                android:name=".quiz_activity"
+                android:exported="true">
+        </activity>
     </application>
 
 </manifest>
