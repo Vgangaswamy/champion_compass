@@ -1,5 +1,6 @@
 package com.example.champion_compass;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -78,6 +79,7 @@ public class quiz_activity extends AppCompatActivity {
             radioButton.setId(View.generateViewId());
             radioButton.setText(String.format("%s: %s", entry.getKey(), entry.getValue()));
             optionsGroup.addView(radioButton);
+            radioButton.setTextColor(Color.BLACK);
         }
     }
 
@@ -93,7 +95,7 @@ public class quiz_activity extends AppCompatActivity {
             Log.d(TAG, "Selected Option: " + selectedAnswer);
 
             Question currentQuestion = getCurrentQuestion();
-            if (currentQuestion != null) {
+            if (currentQuestion != null && currentQuestion.getId() != null) {
                 currentQuestion.setUserAnswer(selectedAnswer);
 
                 FirebaseFirestore db = FirebaseFirestore.getInstance();

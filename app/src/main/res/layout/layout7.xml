@@ -1,96 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FFFFFF">
-
-    <ImageView
-            android:id="@+id/topDecoration"
-            android:layout_width="477dp"
-            android:layout_height="193dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="61dp"
-            android:layout_marginTop="-80dp"
-            android:layout_marginEnd="-127dp"
-            android:layout_marginBottom="681dp"
-            android:background="@drawable/top_rectangle_layout2"
-            tools:ignore="ContentDescription" />
-
-    <LinearLayout
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="560dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="119dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-        <TextView
-                android:id="@+id/question_text"
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+        <ImageView
+                android:id="@+id/topDecoration"
+                android:layout_width="match_parent"
+                android:layout_height="193dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="-127dp"
+                android:background="@drawable/top_rectangle_layout2"
+                tools:ignore="ContentDescription"
+                android:layout_marginTop="-79dp"
+                android:layout_alignParentStart="true"/>
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/buttondecoration_rectangle"
-                android:text="TextView"/>
+                android:layout_below="@id/topDecoration"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <RadioGroup
-                android:id="@+id/options_group"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            <RadioButton
-                    android:id="@+id/option1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="Option 1"/>
-
-            <RadioButton
-                    android:id="@+id/option2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="Option 2"/>
-
-            <RadioButton
-                    android:id="@+id/option3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:text="Option 3"/>
-
-            <RadioButton
-                    android:id="@+id/option4"
-                    android:layout_width="wrap_content"
-                    android:textColor="#000000"
-                    android:layout_height="wrap_content"
-                    android:text="Option 4"/>
-
-            <Button
-                    android:text="@string/submit"
+            <TextView
+                    android:id="@+id/question_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
-                    android:id="@+id/submit_button"/>
-        </RadioGroup>
+                    android:background="@drawable/buttondecoration_rectangle"
+                    android:text="Question will appear here"
+                    android:textSize="18sp"
+                    android:padding="10dp"/>
 
-    </LinearLayout>
-    <ImageView
-            android:id="@+id/bottomDecoration"
-            android:layout_width="454dp"
-            android:layout_height="201dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-92dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="-90dp"
-            android:background="@drawable/bottom_rectangle_layout2" />
+            <RadioGroup
+                    android:id="@+id/options_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/explanation_2"
+                    android:layout_marginTop="20dp">
 
-</RelativeLayout>
+
+
+            </RadioGroup>
+
+            <Button
+                    android:id="@+id/submit_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:visibility="visible"
+                    android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/bottomDecoration"
+                android:layout_width="384dp"
+                android:layout_height="204dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bottom_rectangle_layout2"
+                tools:ignore="ContentDescription"
+                android:layout_marginBottom="-92dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-129dp"/>
+
+    </RelativeLayout>
+</ScrollView>
