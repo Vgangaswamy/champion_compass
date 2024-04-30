@@ -23,6 +23,7 @@ public class sign_in_with_g_activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+
     private final ActivityResultLauncher<Intent> signInLauncher = registerForActivityResult(
             new FirebaseAuthUIActivityResultContract(),
             new ActivityResultCallback<FirebaseAuthUIAuthenticationResult>() {
@@ -32,6 +33,8 @@ public class sign_in_with_g_activity extends AppCompatActivity {
                 }
             }
     );
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,17 +97,24 @@ public class sign_in_with_g_activity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
-                        updateUI(user);
+                        if (user != null) {
+                            String userId = user.getUid();  // Retrieve the userId
+                            updateUI(user, userId);  // Pass userId to the updateUI method
+                        } else {
+                            updateUI(null, null);
+                        }
                     } else {
                         Toast.makeText(sign_in_with_g_activity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                        updateUI(null);
+                        updateUI(null, null);
                     }
                 });
     }
-    private void updateUI(FirebaseUser user) {
+
+    private void updateUI(FirebaseUser user, String userId) {
         if (user != null) {
             // User is signed in
-            Intent intent = new Intent(this, welcome_activity.class);  // Navigate to another activity
+            Intent intent = new Intent(this, welcome_activity.class);
+            intent.putExtra("USER_ID", userId);  // Pass userId to the next activity
             startActivity(intent);
             finish();
         } else {
@@ -112,6 +122,7 @@ public class sign_in_with_g_activity extends AppCompatActivity {
             // Optionally reset text fields or update the UI
         }
     }
+
 
 }
 
