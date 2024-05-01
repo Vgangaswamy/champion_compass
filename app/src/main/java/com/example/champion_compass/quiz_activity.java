@@ -1,5 +1,6 @@
 package com.example.champion_compass;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -190,6 +191,7 @@ public class quiz_activity extends AppCompatActivity {
 
                 char highestCountLetter = 'A';
                 int highestCount = countA;
+                Intent intent;
 
                 if (countB > highestCount) {
                     highestCount = countB;
@@ -215,6 +217,26 @@ public class quiz_activity extends AppCompatActivity {
                 System.out.println("Count of D's: " + countD);
                 System.out.println("Count of E's: " + countE);
                 System.out.println("Highest count is " + highestCount + " for letter: " + highestCountLetter);
+
+                switch (highestCountLetter) {
+                    case 'A':
+                        intent = new Intent(quiz_activity.this, ActivityA.class); // Top lane
+                        break;
+                    case 'B':
+                        intent = new Intent(quiz_activity.this, ActivityB.class); //Jungle lane
+                        break;
+                    case 'C':
+                        intent = new Intent(quiz_activity.this, ActivityC.class); // Mid lane
+                        break;
+                    case 'D':
+                        intent = new Intent(quiz_activity.this, ActivityD.class); // Support lane
+                        break;
+                    case 'E':
+                        intent = new Intent(quiz_activity.this, ActivityE.class); // Bot lane
+                        break;
+                    default:
+                        return; // No action if no cases match
+                }
 
             }
 

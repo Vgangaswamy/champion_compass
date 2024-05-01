@@ -43,6 +43,26 @@
                 android:name=".quiz_activity"
                 android:exported="true">
         </activity>
+        <activity
+                android:name=".ActivityA"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".ActivityB"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".ActivityC"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".ActivityD"
+                android:exported="true">
+        </activity>
+        <activity
+                android:name=".ActivityE"
+                android:exported="true">
+        </activity>
     </application>
 
 </manifest>
