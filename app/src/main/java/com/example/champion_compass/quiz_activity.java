@@ -20,7 +20,7 @@ public class quiz_activity extends AppCompatActivity {
     private static final String TAG = "quiz_activity";
     private List<Question> questions;
     private int currentQuestionIndex = 0;
-    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseDatabase db = FirebaseDatabase.getInstance();
     private final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private String selectedAnswer;
 
@@ -61,6 +61,7 @@ public class quiz_activity extends AppCompatActivity {
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         Question question = snapshot.getValue(Question.class);
                         if (question != null && question.getQuestionId() != null && !question.getOptions().isEmpty()) {
+                            question.setId(snapshot.getKey());
                             questions.add(question);
                             Log.d(TAG, "Fetched Question ID: " + question.getQuestionId());
                         } else {
@@ -135,9 +136,9 @@ public class quiz_activity extends AppCompatActivity {
         answerData.put("userAnswer", selectedAnswer);
         answerData.put("userId", user.getUid());
 
-        db.collection("questions").document(currentQuestion.getId())
-                .collection("answers").document(user.getUid())
-                .set(answerData)
+        db.getReference("questions").child(currentQuestion.getId())
+                .child("userAnswer").child(user.getUid())
+                .setValue(answerData)
                 .addOnSuccessListener(aVoid -> Log.d(TAG, "User answer saved successfully"))
                 .addOnFailureListener(e -> Log.e(TAG, "Error saving user answer", e));
     }
