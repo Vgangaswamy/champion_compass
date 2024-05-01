@@ -8,169 +8,194 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.*;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.*;
 
 public class quiz_activity extends AppCompatActivity {
 
     private static final String TAG = "quiz_activity";
-    private String selectedAnswer;
-    private String userId;
     private List<Question> questions;
+    private int currentQuestionIndex = 0;
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private String selectedAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout7);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            String userId = user.getUid();  // Retrieve the user ID
-            // Optionally, store userId in a class variable if it's used in multiple places
-        } else {
-            // Handle the case where there is no signed-in user
+        if (user == null) {
             Log.d(TAG, "No user is signed in.");
-            // Redirect to log in activity or disable specific functionality
+            finish();  // Exit the activity if no user is logged in
+            return;
         }
 
         questions = new ArrayList<>();
         fetchQuestions();
 
         Button button_to_submit = findViewById(R.id.submit_button);
-        button_to_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onSubmitButtonClick(v); //
-            }
-        });
+        button_to_submit.setOnClickListener(this::onSubmitButtonClick);
 
         RadioGroup optionsGroup = findViewById(R.id.options_group);
-        optionsGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton selectedButton = findViewById(checkedId);
-                selectedAnswer = selectedButton.getText().toString();
+        optionsGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            RadioButton selectedButton = findViewById(checkedId);
+            if (selectedButton != null) {
+                String selectedAnswer = selectedButton.getText().toString();
                 Log.d(TAG, "Selected Option: " + selectedAnswer);
+                storeUserAnswer(selectedAnswer);
             }
         });
     }
 
     private void fetchQuestions() {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("questions").get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                for (QueryDocumentSnapshot document : task.getResult()) {
-                    Question question = document.toObject(Question.class);
-                    questions.add(question);
+        DatabaseReference questionsRef = FirebaseDatabase.getInstance().getReference("questions");
+        questionsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        Question question = snapshot.getValue(Question.class);
+                        if (question != null && question.getQuestionId() != null && !question.getOptions().isEmpty()) {
+                            questions.add(question);
+                            Log.d(TAG, "Fetched Question ID: " + question.getQuestionId());
+                        } else {
+                            // Safely logging potentially null data
+                            Object data = snapshot.getValue();
+                            Log.e(TAG, "Invalid question data: " + (data == null ? "null" : data.toString()));
+                        }
+                    }
+                    if (!questions.isEmpty()) {
+                        displayQuestion();
+                    }
+                } else {
+                    Log.e(TAG, "No data found for questions");
                 }
-                if (!questions.isEmpty()) {
-                    displayQuestion(questions.get(0));
-                }
-            } else {
-                Log.w(TAG, "Error getting documents.", task.getException());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "loadQuestion:onCancelled", databaseError.toException());
             }
         });
     }
 
-    private void displayQuestion(Question question) {
+
+
+
+    private void displayQuestion() {
+        if (currentQuestionIndex < questions.size()) {
+            Question question = questions.get(currentQuestionIndex);
+            if (question != null && question.getQuestionId() != null) {
+                updateUIWithQuestion(question);  // Update the UI with the new question
+            } else {
+                Log.e(TAG, "Current question or question ID is null at index " + currentQuestionIndex);
+            }
+        } else {
+            Log.e(TAG, "Question index out of bounds: " + currentQuestionIndex);
+            finishQuiz();
+        }
+    }
+
+    private void updateUIWithQuestion(Question question) {
         TextView questionTextView = findViewById(R.id.question_text);
-        questionTextView.setText(question.getQuestionText());  // Set the question text
+        questionTextView.setText(question.getText());  // Set the text of the question to TextView
 
         RadioGroup optionsGroup = findViewById(R.id.options_group);
-        optionsGroup.removeAllViews();  // Clear previous options
+        optionsGroup.clearCheck();  // Clear any previous selection
+        optionsGroup.removeAllViews();  // Remove all previous options
 
+        // Dynamically create radio buttons for each option
         for (Map.Entry<String, String> entry : question.getOptions().entrySet()) {
             RadioButton radioButton = new RadioButton(this);
-            radioButton.setId(View.generateViewId());  // Ensure a unique ID
-            radioButton.setText(entry.getValue());  // Set the text for the button
-            radioButton.setTextColor(Color.BLACK);
-            optionsGroup.addView(radioButton);  // Add to the group
+            radioButton.setId(View.generateViewId());  // Generate a unique ID for each radio button
+            radioButton.setText(entry.getKey() + ": " + entry.getValue());  // Set the text for the radio button
+            radioButton.setTextColor(Color.BLACK);  // Set the text color
+            optionsGroup.addView(radioButton);  // Add the radio button to the RadioGroup
+            Log.d(TAG, "Option added: " + entry.getKey() + ": " + entry.getValue());  // Log the addition of each option
         }
     }
 
 
-    public void onSubmitButtonClick(View view) {
-        RadioGroup optionsGroup = findViewById(R.id.options_group);
-        int selectedId = optionsGroup.getCheckedRadioButtonId();
-
-        if (selectedId == -1) {
-            Toast.makeText(getApplicationContext(), "Please select an answer", Toast.LENGTH_SHORT).show();
-        } else {
-            RadioButton selectedButton = findViewById(selectedId);
-            String selectedAnswer = selectedButton.getText().toString();
-            Log.d(TAG, "Selected Option: " + selectedAnswer);
-
-            Question currentQuestion = getCurrentQuestion();
-            if (currentQuestion != null && currentQuestion.getId() != null) {
-                currentQuestion.setUserAnswer(selectedAnswer);
 
 
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
-                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid(); // Assuming the user is logged in
+    private void storeUserAnswer(String selectedAnswer) {
+        Question currentQuestion = questions.get(currentQuestionIndex);
+        if (currentQuestion == null || currentQuestion.getId() == null) {
+            Log.e(TAG, "Current question or question ID is null");
+            return; // Early return to avoid crashing
+        }
+        currentQuestion.setUserAnswer(selectedAnswer);
 
-                Map<String, Object> answerData = new HashMap<>();
-                answerData.put("userAnswer", "User's selected option");
-                answerData.put("userId", userId);// If you let Firestore auto-generate the document ID
-                db.collection("questions").document("theQuestionId")
-                        .collection("userAnswers")
-                        .add(answerData) // This will auto-generate a document ID
-                        .addOnSuccessListener(documentReference -> Log.d("Firestore", "User answer saved successfully, Document ID: " + documentReference.getId()))
-                        .addOnFailureListener(e -> Log.e("Firestore", "Error saving user answer", e));
+        Map<String, Object> answerData = new HashMap<>();
+        answerData.put("userAnswer", selectedAnswer);
+        answerData.put("userId", user.getUid());
+
+        db.collection("questions").document(currentQuestion.getId())
+                .collection("answers").document(user.getUid())
+                .set(answerData)
+                .addOnSuccessListener(aVoid -> Log.d(TAG, "User answer saved successfully"))
+                .addOnFailureListener(e -> Log.e(TAG, "Error saving user answer", e));
+    }
 
 
-            }
+    private void onSubmitButtonClick(View view) {
+        // Check to prevent out-of-bounds access
+        if (currentQuestionIndex < questions.size()) {
+            storeUserAnswer(selectedAnswer);  // Make sure to capture the selected answer correctly
 
-            int currentIndex = questions.indexOf(currentQuestion);
-            if (currentIndex < questions.size() - 1) {
-                displayQuestion(questions.get(currentIndex + 1));
+            currentQuestionIndex++;  // Increment after storing the answer
+
+            if (currentQuestionIndex < questions.size()) {
+                displayQuestion();
             } else {
-                Toast.makeText(getApplicationContext(), "End of quiz", Toast.LENGTH_SHORT).show();
-                processUserAnswers();
+                Log.d(TAG, "End of Quiz");
+                finishQuiz();
             }
+        } else {
+            Log.e(TAG, "Invalid question index access: " + currentQuestionIndex);
         }
     }
 
-    private void processUserAnswers() {
-        processUserAnswers(this.questions); // Use a class field or a default value
-    }
 
-    // Overloaded method with parameters
-    private void processUserAnswers(List<Question> questions) {
-        for (Question question : questions) {
-            String userAnswer = question.getUserAnswer();
-            Log.d(TAG, "User's Answer: " + userAnswer);
-        }
-    }
-
-    private Question getCurrentQuestion() {
-        TextView questionTextView = findViewById(R.id.question_text);
-        String currentQuestionText = questionTextView.getText().toString();
-        for (Question question : questions) {
-            if (question.getQuestionText().equals(currentQuestionText)) {
-                return question;
-            }
-        }
-        return null;
+    private void finishQuiz() {
+        // Disable interaction or navigate to another activity
     }
 
     public static class Question {
+        private String questionId;
         private String id;
-        private String questionText;
+        private String text;
         private Map<String, String> options;
         private String userAnswer;
 
-        public Question() {}
+        public Question() {
+            // Default no-arg constructor needed for Firebase deserialization
+        }
 
-        public Question(String id, String questionText, Map<String, String> options) {
-            this.id = id;
-            this.questionText = questionText;
-            this.options = options;
+        // Getters and setters
+        public String getQuestionId() {
+            return questionId;
+        }
+
+        public void setQuestionId(String questionId) {
+            this.questionId = questionId;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+
+        public Map<String, String> getOptions() {
+            return options;
         }
 
         public String getId() {
@@ -181,6 +206,10 @@ public class quiz_activity extends AppCompatActivity {
             this.id = id;
         }
 
+        public void setOptions(Map<String, String> options) {
+            this.options = options;
+        }
+
         public String getUserAnswer() {
             return userAnswer;
         }
@@ -189,26 +218,7 @@ public class quiz_activity extends AppCompatActivity {
             this.userAnswer = userAnswer;
         }
 
-        public String getQuestionText() {
-            return questionText;
-        }
-
-        public void setQuestionText(String questionText) {
-            this.questionText = questionText;
-        }
-
-        public Map<String, String> getOptions() {
-            return options;
-        }
-
-        public void setOptions(Map<String, String> options) {
-            this.options = options;
-        }
     }
-
-
-
-
 
 
 
