@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.*;
 import com.google.firebase.firestore.FirebaseFirestore;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -45,9 +46,9 @@ public class quiz_activity extends AppCompatActivity {
         optionsGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton selectedButton = findViewById(checkedId);
             if (selectedButton != null) {
-                String selectedAnswer = selectedButton.getText().toString();
+                selectedAnswer = selectedButton.getText().toString().substring(0,1);
                 Log.d(TAG, "Selected Option: " + selectedAnswer);
-                storeUserAnswer(selectedAnswer);
+               //  storeUserAnswer(selectedAnswer);
             }
         });
     }
@@ -86,8 +87,6 @@ public class quiz_activity extends AppCompatActivity {
     }
 
 
-
-
     private void displayQuestion() {
         if (currentQuestionIndex < questions.size()) {
             Question question = questions.get(currentQuestionIndex);
@@ -98,7 +97,7 @@ public class quiz_activity extends AppCompatActivity {
             }
         } else {
             Log.e(TAG, "Question index out of bounds: " + currentQuestionIndex);
-            finishQuiz();
+            countUserAnswers(user.getUid());
         }
     }
 
@@ -130,8 +129,6 @@ public class quiz_activity extends AppCompatActivity {
             Log.e(TAG, "Current question or question ID is null");
             return; // Early return to avoid crashing
         }
-        currentQuestion.setUserAnswer(selectedAnswer);
-
         Map<String, Object> answerData = new HashMap<>();
         answerData.put("userAnswer", selectedAnswer);
         answerData.put("userId", user.getUid());
@@ -155,7 +152,7 @@ public class quiz_activity extends AppCompatActivity {
                 displayQuestion();
             } else {
                 Log.d(TAG, "End of Quiz");
-                finishQuiz();
+                countUserAnswers(user.getUid());
             }
         } else {
             Log.e(TAG, "Invalid question index access: " + currentQuestionIndex);
@@ -163,16 +160,80 @@ public class quiz_activity extends AppCompatActivity {
     }
 
 
-    private void finishQuiz() {
-        // Disable interaction or navigate to another activity
+    private void countUserAnswers(String userId) {
+        db.getReference("questions").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int countA = 0;
+                int countB = 0;
+                int countC = 0;
+                int countD = 0;
+                int countE = 0;
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    DataSnapshot answerSnapshot = snapshot.child("userAnswer").child(userId);
+                    if (answerSnapshot.exists()) {
+                        String answer = answerSnapshot.child("userAnswer").getValue(String.class);
+                        if ("A".equals(answer)) {
+                            countA++;
+                        } else if ("B".equals(answer)) {
+                            countB++;
+                        } else if ("C".equals(answer)) {
+                            countC++;
+                        } else if ("D".equals(answer)) {
+                            countD++;
+                        } else {
+                            countE++;
+                        }
+                    }
+                }
+
+                char highestCountLetter = 'A';
+                int highestCount = countA;
+
+                if (countB > highestCount) {
+                    highestCount = countB;
+                    highestCountLetter = 'B';
+                }
+                if (countC > highestCount) {
+                    highestCount = countC;
+                    highestCountLetter = 'C';
+                }
+                if (countD > highestCount) {
+                    highestCount = countD;
+                    highestCountLetter = 'D';
+                }
+                if (countE > highestCount) {
+                    highestCount = countE;
+                    highestCountLetter = 'E';
+                }
+
+                // Display or use the counts
+                System.out.println("Count of A's: " + countA);
+                System.out.println("Count of B's: " + countB);
+                System.out.println("Count of C's: " + countC);
+                System.out.println("Count of D's: " + countD);
+                System.out.println("Count of E's: " + countE);
+                System.out.println("Highest count is " + highestCount + " for letter: " + highestCountLetter);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                System.out.println("Database error: " + databaseError.getMessage());
+            }
+        });
     }
 
-    public static class Question {
+
+
+
+        public static class Question {
         private String questionId;
         private String id;
         private String text;
         private Map<String, String> options;
-        private String userAnswer;
+        private Map<String, Object> userAnswer;
 
         public Question() {
             // Default no-arg constructor needed for Firebase deserialization
@@ -211,11 +272,11 @@ public class quiz_activity extends AppCompatActivity {
             this.options = options;
         }
 
-        public String getUserAnswer() {
+        public Map<String, Object> getUserAnswer() {
             return userAnswer;
         }
 
-        public void setUserAnswer(String userAnswer) {
+        public void setUserAnswer(Map<String, Object> userAnswer) {
             this.userAnswer = userAnswer;
         }
 
