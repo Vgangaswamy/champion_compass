@@ -20,4 +20,33 @@
     <string name="explanation7">------------Jungle:------------ Junglers support lanes by clearing jungle camps for resources, controlling game objectives, and initiating surprise attacks (ganks).</string>
     <string name="explanation8">Not gonna lie, but that was a lot of explanation. Now, let\'s head to the quiz :)</string>
     <string name="garen">Garen</string>
+    <string name="nasus">Nasus</string>
+    <string name="Tryndamere">Tryndamere</string>
+    <string name="aatrox">Aatrox</string>
+    <string name="top_lane">TOP LANE</string>
+    <string name="mid_lane">MID LANE</string>
+    <string name="bot_lane">BOT LANE</string>
+    <string name="support">SUPPORT LANE</string>
+    <string name="jungle">JUNGLE LANE</string>
+    <string name="annie">Annie</string>
+    <string name="lux">Lux</string>
+    <string name="ziggs">Ziggs</string>
+    <string name="aurelion">Aurelion sol</string>
+    <string name="ashe">Ashe</string>
+    <string name="cait">Caitlyn</string>
+    <string name="miss_f">Miss Fortune</string>
+    <string name="jinx">Jinx</string>
+    <string name="janna">Janna</string>
+    <string name="leona">Leona</string>
+    <string name="soraka">Soraka</string>
+    <string name="yummi">Yummi</string>
+    <string name="amumu">Amumu</string>
+    <string name="rammus">Rammus</string>
+    <string name="warwick">Warwick</string>
+    <string name="voli">Volibear</string>
+    <string name="yi">Master Yi</string>
+
+
 </resources>
+
+

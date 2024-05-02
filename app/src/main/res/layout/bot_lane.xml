@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_alignParentTop="true"
-            android:text="@string/top_lane"
+            android:text="@string/bot_lane"
             android:fontFamily="@font/font1"
             android:textColor="@color/white"
             android:shadowColor="#000000"
@@ -78,11 +78,11 @@
                 <ImageView
                         android:layout_width="180dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/garen"/>
+                        android:src="@drawable/ashe"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/garen"
+                        android:text="@string/ashe"
                         android:fontFamily="@font/font1"
                         android:textColor="@color/black"
                         android:shadowColor="#000000"
@@ -114,11 +114,11 @@
                 <ImageView
                         android:layout_width="180dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/nasus"/>
+                        android:src="@drawable/cait"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/nasus"
+                        android:text="@string/cait"
                         android:fontFamily="@font/font1"
                         android:textColor="@color/black"
                         android:shadowColor="#000000"
@@ -150,11 +150,11 @@
                 <ImageView
                         android:layout_width="180dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/tryn"/>
+                        android:src="@drawable/miss_f"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Tryndamere"
+                        android:text="@string/miss_f"
                         android:fontFamily="@font/font1"
                         android:textColor="@color/black"
                         android:shadowColor="#000000"
@@ -186,11 +186,11 @@
                 <ImageView
                         android:layout_width="180dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/aatrox"/>
+                        android:src="@drawable/jynx"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/aatrox"
+                        android:text="@string/jinx"
                         android:fontFamily="@font/font1"
                         android:textColor="@color/black"
                         android:shadowColor="#000000"

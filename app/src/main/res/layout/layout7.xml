@@ -20,7 +20,7 @@
                 android:layout_marginEnd="-127dp"
                 android:background="@drawable/top_rectangle_layout2"
                 tools:ignore="ContentDescription"
-                android:layout_marginTop="-79dp"
+                android:layout_marginTop="-98dp"
                 android:layout_alignParentStart="true"/>
         <LinearLayout
                 android:layout_width="match_parent"
@@ -28,25 +28,24 @@
                 android:layout_below="@id/topDecoration"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="16dp" android:id="@+id/linearLayout">
 
             <TextView
                     android:id="@+id/question_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttondecoration_rectangle"
-                    android:text="Question will appear here"
+                    android:hint="Question will appear here"
                     android:textSize="18sp"
                     android:padding="10dp"/>
 
             <RadioGroup
                     android:id="@+id/options_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
                     android:orientation="vertical"
                     android:background="@drawable/explanation_2"
                     android:layout_marginTop="20dp">
-
 
 
             </RadioGroup>
@@ -57,10 +56,22 @@
                     android:layout_height="wrap_content"
                     android:text="@string/submit"
                     android:visibility="visible"
+                    app:backgroundTint="@color/color1"
                     android:layout_marginTop="16dp"/>
 
         </LinearLayout>
 
+        <ImageView
+                android:src="@drawable/irelia"
+                android:layout_width="208dp"
+                android:layout_height="207dp"
+                android:id="@+id/imageView17"
+                android:layout_marginEnd="102dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="92dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="101dp"/>
         <ImageView
                 android:id="@+id/bottomDecoration"
                 android:layout_width="384dp"
@@ -69,11 +80,12 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bottom_rectangle_layout2"
                 tools:ignore="ContentDescription"
-                android:layout_marginBottom="-92dp"
+                android:layout_marginBottom="-112dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="-129dp"/>
+
 
     </RelativeLayout>
 </ScrollView>
