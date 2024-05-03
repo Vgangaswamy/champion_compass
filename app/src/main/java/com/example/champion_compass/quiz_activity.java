@@ -153,6 +153,7 @@ public class quiz_activity extends AppCompatActivity {
                 displayQuestion();
             } else {
                 Log.d(TAG, "End of Quiz");
+
                 countUserAnswers(user.getUid());
             }
         } else {
@@ -217,9 +218,11 @@ public class quiz_activity extends AppCompatActivity {
                 System.out.println("Count of D's: " + countD);
                 System.out.println("Count of E's: " + countE);
                 System.out.println("Highest count is " + highestCount + " for letter: " + highestCountLetter);
+                System.out.println("switch: " + highestCountLetter);
 
                 switch (highestCountLetter) {
                     case 'A':
+                        System.out.println("Highest count is " + highestCount + " for letter: " + highestCountLetter);
                         intent = new Intent(quiz_activity.this, ActivityA.class); // Top lane
                         break;
                     case 'B':

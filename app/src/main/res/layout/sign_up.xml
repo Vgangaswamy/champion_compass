@@ -5,19 +5,59 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/topDecoration"
-        android:layout_width="477dp"
-        android:layout_height="193dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="-80dp"
-        android:layout_marginEnd="-118dp"
-        android:layout_marginBottom="629dp"
-        android:background="@drawable/top_rectangle_layout2" />
 
+    <ImageView
+
+            android:layout_width="193dp"
+            android:layout_height="71dp"
+            android:id="@+id/imageView11"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-52dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="499dp"
+            android:background="@drawable/top_rectangle_layout2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="270dp"/>
+
+
+    <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:id="@+id/imageView13"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="573dp"
+            android:background="@drawable/bottom_rectangle_layout2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-64dp"/>
+    <ImageView
+
+            android:layout_width="234dp"
+            android:layout_height="99dp"
+            android:id="@+id/imageView14"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-27dp"
+            android:background="@drawable/bottom_rectangle_layout2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="205dp"/>
+    <ImageView
+
+            android:layout_width="202dp"
+            android:layout_height="76dp"
+            android:id="@+id/imageView12"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="209dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="93dp"
+            android:background="@drawable/top_rectangle_layout2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="490dp"
+            android:layout_alignParentTop="true"/>
 
     <TextView
             android:id="@+id/signupView"
@@ -26,9 +66,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="169dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="470dp"
+            android:layout_marginStart="159dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="481dp"
             android:background="@drawable/login_gradient"
             android:fontFamily="@font/font1"
             android:shadowColor="#000000"
@@ -40,7 +80,6 @@
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"/>
-
     <ImageView
 
             android:layout_width="wrap_content"
@@ -161,39 +200,15 @@
 
 
     <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="285dp"
-            android:layout_height="241dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="53dp"
-            android:layout_marginEnd="73dp"
-            android:layout_marginBottom="482dp"
-            app:srcCompat="@drawable/are_you_ready_player"/>
-    <ImageView
-        android:id="@+id/bottomDecoration"
-        android:layout_width="454dp"
-        android:layout_height="201dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-92dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="-90dp"
-        android:background="@drawable/bottom_rectangle_layout2" />
-
-    <ImageView
             android:id="@+id/imageView9"
             android:layout_width="396dp"
             android:layout_height="291dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="-87dp"
-            android:layout_marginEnd="102dp"
-            android:layout_marginBottom="322dp"
+            android:layout_marginStart="-91dp"
+            android:layout_marginEnd="106dp"
+            android:layout_marginBottom="352dp"
             app:srcCompat="@drawable/lux"/>
 
 

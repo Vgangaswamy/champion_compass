@@ -78,7 +78,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/annie"/>
                 <TextView
                         android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/l_1"/>
                 <TextView
                         android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/ziggs"/>
                 <TextView
                         android:layout_width="wrap_content"
@@ -186,7 +186,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/sol"/>
                 <TextView
                         android:layout_width="wrap_content"

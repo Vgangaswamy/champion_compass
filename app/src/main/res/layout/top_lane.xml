@@ -76,9 +76,10 @@
                           android:layout_gravity="center_vertical|center_horizontal">
 
                 <ImageView
-                        android:layout_width="180dp"
-                        android:layout_height="250dp"
-                        android:src="@drawable/garen"/>
+                        android:layout_width="175dp"
+                        android:layout_height="230dp"
+                        android:src="@drawable/g"/>
+
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -113,7 +114,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/nasus"/>
                 <TextView
                         android:layout_width="wrap_content"
@@ -149,7 +150,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/tryn"/>
                 <TextView
                         android:layout_width="wrap_content"
@@ -185,7 +186,7 @@
 
                 <ImageView
                         android:layout_width="180dp"
-                        android:layout_height="250dp"
+                        android:layout_height="230dp"
                         android:src="@drawable/aatrox"/>
                 <TextView
                         android:layout_width="wrap_content"

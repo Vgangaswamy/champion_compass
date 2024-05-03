@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splash_screen_activity);
 
         // Handler to delay the screen transition by 3 seconds (3000 milliseconds)
         new Handler().postDelayed(new Runnable() {
