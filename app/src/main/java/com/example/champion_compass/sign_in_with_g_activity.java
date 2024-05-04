@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -23,7 +22,6 @@ public class sign_in_with_g_activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-
     private final ActivityResultLauncher<Intent> signInLauncher = registerForActivityResult(
             new FirebaseAuthUIActivityResultContract(),
             new ActivityResultCallback<FirebaseAuthUIAuthenticationResult>() {
@@ -33,7 +31,6 @@ public class sign_in_with_g_activity extends AppCompatActivity {
                 }
             }
     );
-
 
 
     @Override
@@ -50,7 +47,7 @@ public class sign_in_with_g_activity extends AppCompatActivity {
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createSignInIntent(); // Call the method that starts the sign-in process
+                createSignInIntent(); // call method to start the process
             }
         });
 
@@ -59,11 +56,9 @@ public class sign_in_with_g_activity extends AppCompatActivity {
     }
 
     public void createSignInIntent() {
-        // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
                 new AuthUI.IdpConfig.GoogleBuilder().build());
-
-        // Create and launch sign-in intent
+        // Creating and launching sign-in intent
         Intent signInIntent = AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setAvailableProviders(providers)
@@ -79,17 +74,15 @@ public class sign_in_with_g_activity extends AppCompatActivity {
             Toast.makeText(sign_in_with_g_activity.this, "Successful sign in", Toast.LENGTH_SHORT).show();
             redirectToWelcomeActivity();
         } else {
-            // Sign in failed. If response is null the user canceled the
-            // sign-in flow using the back button. Otherwise check
-            // response.getError().getErrorCode() and handle the error.
-            // ...
+            // Unsuccessful sign in
+            Toast.makeText(sign_in_with_g_activity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void redirectToWelcomeActivity() {
         Intent intent = new Intent(this, welcome_activity.class);
         startActivity(intent);
-        finish(); // Optional: if you don't want the user to return to this activity on pressing back button
+        finish();
     }
 
     private void signInUser(String email, String password) {
@@ -100,6 +93,7 @@ public class sign_in_with_g_activity extends AppCompatActivity {
                         if (user != null) {
                             String userId = user.getUid();  // Retrieve the userId
                             updateUI(user, userId);  // Pass userId to the updateUI method
+                            Toast.makeText(sign_in_with_g_activity.this, "Successful sign in", Toast.LENGTH_SHORT).show();
                         } else {
                             updateUI(null, null);
                         }
@@ -119,7 +113,7 @@ public class sign_in_with_g_activity extends AppCompatActivity {
             finish();
         } else {
             // User is not signed in
-            // Optionally reset text fields or update the UI
+            Toast.makeText(sign_in_with_g_activity.this, "User not signed in, please Sign in or Sign up", Toast.LENGTH_SHORT).show();
         }
     }
 

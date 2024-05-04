@@ -62,6 +62,8 @@
     <string name="warwick">Warwick</string>
     <string name="voli">Volibear</string>
     <string name="yi">Master Yi</string>
+    <string name="exit">EXIT</string>
+    <string name="sign_out">Sign Out</string>
     <string name="open_nav">Open Navigation Bar</string>
     <string name="close_nav">Close Navigation Bar</string>
     <!-- TODO: Remove or change this placeholder text -->

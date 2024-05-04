@@ -17,19 +17,20 @@ public class firebaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_up);  // Your custom sign-up layout
+        setContentView(R.layout.sign_up);  //custom sign-up layout
 
         mAuth = FirebaseAuth.getInstance();
 
         EditText emailEditText = findViewById(R.id.editTextEmail);
         EditText passwordEditText = findViewById(R.id.editTextPassword);
         Button signUpButton = findViewById(R.id.buttonSignUp);
-        Button signInButton = findViewById(R.id.buttonSignIn);  // Assuming you have this in your layout
+        Button signInButton = findViewById(R.id.buttonSignIn);
 
         signUpButton.setOnClickListener(v -> registerUser(emailEditText.getText().toString(), passwordEditText.getText().toString()));
         signInButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, sign_in_with_g_activity.class);
             startActivity(intent);
+
         });
     }
 
@@ -39,6 +40,7 @@ public class firebaseActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
                         updateUI(user);
+                        Toast.makeText(this, "successful sign in", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(firebaseActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                         updateUI(null);
@@ -54,7 +56,7 @@ public class firebaseActivity extends AppCompatActivity {
             finish();
         } else {
             // User is not signed in
-            // Optionally reset text fields or update the UI
+
         }
     }
 }

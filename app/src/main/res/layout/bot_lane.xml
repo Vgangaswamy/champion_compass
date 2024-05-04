@@ -28,14 +28,20 @@
             android:layout_alignParentStart="true"/>
 
     <Button
-            android:text="Button"
+            android:text="@string/exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/top_lane_button"
+            android:id="@+id/bot_lane_button"
+            android:shadowColor="#000000"
+            android:textSize="20sp"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="50dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/color1"
             android:background="@drawable/buttondecoration_rectangle"
             android:layout_alignParentStart="true"
             android:layout_marginStart="50dp"/>
@@ -56,6 +62,7 @@
         <androidx.cardview.widget.CardView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
+                android:backgroundTint="@color/white"
                 android:layout_gravity="fill"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -73,6 +80,7 @@
                           android:layout_height="wrap_content"
                           android:orientation="vertical"
                           android:gravity="center"
+                          android:backgroundTint="@color/white"
                           android:layout_gravity="center_vertical|center_horizontal">
 
                 <ImageView
@@ -96,6 +104,7 @@
 
         <androidx.cardview.widget.CardView
                 android:layout_width="10dp"
+                android:backgroundTint="@color/white"
                 android:layout_height="10dp"
                 android:layout_gravity="fill"
                 android:layout_rowWeight="1"
@@ -109,6 +118,7 @@
                           android:layout_height="wrap_content"
                           android:orientation="vertical"
                           android:gravity="center"
+                          android:backgroundTint="@color/white"
                           android:layout_gravity="center_vertical|center_horizontal">
 
                 <ImageView
@@ -134,6 +144,7 @@
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_gravity="fill"
+                android:backgroundTint="@color/white"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
@@ -145,6 +156,7 @@
                           android:layout_height="wrap_content"
                           android:orientation="vertical"
                           android:gravity="center"
+                          android:backgroundTint="@color/white"
                           android:layout_gravity="center_vertical|center_horizontal">
 
                 <ImageView
@@ -169,6 +181,7 @@
         <androidx.cardview.widget.CardView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
+                android:backgroundTint="@color/white"
                 android:layout_gravity="fill"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
@@ -181,6 +194,7 @@
                           android:layout_height="wrap_content"
                           android:orientation="vertical"
                           android:gravity="center"
+                          android:backgroundTint="@color/white"
                           android:layout_gravity="center_vertical|center_horizontal">
 
                 <ImageView

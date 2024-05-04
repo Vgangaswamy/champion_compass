@@ -113,15 +113,13 @@ public class quiz_activity extends AppCompatActivity {
         // Dynamically create radio buttons for each option
         for (Map.Entry<String, String> entry : question.getOptions().entrySet()) {
             RadioButton radioButton = new RadioButton(this);
-            radioButton.setId(View.generateViewId());  // Generate a unique ID for each radio button
-            radioButton.setText(entry.getKey() + ": " + entry.getValue());  // Set the text for the radio button
-            radioButton.setTextColor(Color.BLACK);  // Set the text color
-            optionsGroup.addView(radioButton);  // Add the radio button to the RadioGroup
-            Log.d(TAG, "Option added: " + entry.getKey() + ": " + entry.getValue());  // Log the addition of each option
+            radioButton.setId(View.generateViewId());
+            radioButton.setText(entry.getKey() + ": " + entry.getValue());
+            radioButton.setTextColor(Color.BLACK);
+            optionsGroup.addView(radioButton);
+            Log.d(TAG, "Option added: " + entry.getKey() + ": " + entry.getValue());
         }
     }
-
-
 
 
     private void storeUserAnswer(String selectedAnswer) {
@@ -142,10 +140,11 @@ public class quiz_activity extends AppCompatActivity {
     }
 
 
+
     private void onSubmitButtonClick(View view) {
         // Check to prevent out-of-bounds access
         if (currentQuestionIndex < questions.size()) {
-            storeUserAnswer(selectedAnswer);  // Make sure to capture the selected answer correctly
+            storeUserAnswer(selectedAnswer);
 
             currentQuestionIndex++;  // Increment after storing the answer
 
@@ -161,7 +160,7 @@ public class quiz_activity extends AppCompatActivity {
         }
     }
 
-
+    // counting user answer options
     private void countUserAnswers(String userId) {
         db.getReference("questions").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -220,22 +219,27 @@ public class quiz_activity extends AppCompatActivity {
                 System.out.println("Highest count is " + highestCount + " for letter: " + highestCountLetter);
                 System.out.println("switch: " + highestCountLetter);
 
+                // prompting the user to the respective layout based on answers
                 switch (highestCountLetter) {
                     case 'A':
-                        System.out.println("Highest count is " + highestCount + " for letter: " + highestCountLetter);
-                        intent = new Intent(quiz_activity.this, ActivityA.class); // Top lane
+                        intent = new Intent(quiz_activity.this, ActivityA.class);
+                        startActivity(intent);// Top lane
                         break;
                     case 'B':
-                        intent = new Intent(quiz_activity.this, ActivityB.class); //Jungle lane
+                        intent = new Intent(quiz_activity.this, ActivityB.class);
+                        startActivity(intent);//Jungle lane
                         break;
                     case 'C':
-                        intent = new Intent(quiz_activity.this, ActivityC.class); // Mid lane
+                        intent = new Intent(quiz_activity.this, ActivityC.class);
+                        startActivity(intent);// Mid lane
                         break;
                     case 'D':
-                        intent = new Intent(quiz_activity.this, ActivityD.class); // Support lane
+                        intent = new Intent(quiz_activity.this, ActivityD.class);
+                        startActivity(intent);// Support lane
                         break;
                     case 'E':
-                        intent = new Intent(quiz_activity.this, ActivityE.class); // Bot lane
+                        intent = new Intent(quiz_activity.this, ActivityE.class);
+                        startActivity(intent);// Bot lane
                         break;
                     default:
                         return; // No action if no cases match
@@ -250,9 +254,6 @@ public class quiz_activity extends AppCompatActivity {
         });
     }
 
-
-
-
         public static class Question {
         private String questionId;
         private String id;
@@ -261,7 +262,7 @@ public class quiz_activity extends AppCompatActivity {
         private Map<String, Object> userAnswer;
 
         public Question() {
-            // Default no-arg constructor needed for Firebase deserialization
+            // constructor
         }
 
         // Getters and setters
@@ -306,8 +307,4 @@ public class quiz_activity extends AppCompatActivity {
         }
 
     }
-
-
-
-
 }

@@ -8,57 +8,54 @@
 
     <ImageView
 
-            android:layout_width="193dp"
-            android:layout_height="71dp"
+            android:layout_width="201dp"
+            android:layout_height="194dp"
             android:id="@+id/imageView11"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="-52dp"
+            android:layout_marginEnd="-61dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="499dp"
+            android:layout_marginBottom="381dp"
             android:background="@drawable/top_rectangle_layout2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="270dp"/>
-
+            android:layout_marginStart="271dp"/>
 
     <ImageView
 
-            android:layout_width="wrap_content"
-            android:layout_height="84dp"
+            android:layout_width="176dp"
+            android:layout_height="175dp"
             android:id="@+id/imageView13"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="250dp"
+            android:layout_marginEnd="280dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="573dp"
+            android:layout_marginBottom="476dp"
             android:background="@drawable/bottom_rectangle_layout2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="-64dp"/>
+            android:layout_marginStart="-45dp"/>
+
     <ImageView
 
-            android:layout_width="234dp"
-            android:layout_height="99dp"
+            android:layout_width="175dp"
+            android:layout_height="169dp"
             android:id="@+id/imageView14"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="-28dp"
+            android:layout_marginEnd="-27dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="-27dp"
+            android:layout_marginBottom="-48dp"
             android:background="@drawable/bottom_rectangle_layout2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="205dp"/>
+            android:layout_marginStart="263dp"/>
     <ImageView
-
-            android:layout_width="202dp"
-            android:layout_height="76dp"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
             android:id="@+id/imageView12"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="209dp"
+            android:layout_marginEnd="261dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="93dp"
             android:background="@drawable/top_rectangle_layout2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="490dp"
-            android:layout_alignParentTop="true"/>
-
+            android:layout_marginStart="-34dp"
+    />
     <TextView
             android:id="@+id/signupView"
             android:layout_width="206dp"
