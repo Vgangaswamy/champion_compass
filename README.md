@@ -42,9 +42,9 @@ git clone https://github.com/Vgangaswamy/champion_compass.git
   <img src="https://github.com/user-attachments/assets/dd0b51c8-a8b3-4d0c-9b3c-1127748d80a5" width="400" />
   <img src="https://github.com/user-attachments/assets/c4cf2ea7-78be-433d-8e6b-804e20de025f" width="400" />
   <img src="https://github.com/user-attachments/assets/21afb5a0-e33b-44a0-99f2-f2a79706d596" width="400" />
-  <img src="https://github.com/user-attachments/assets/c9a38b6e-f27c-4ce3-a322-a55553f947e5" width="480" />
+  <img src="https://github.com/user-attachments/assets/c9a38b6e-f27c-4ce3-a322-a55553f947e5" width="500" />
   <img src="https://github.com/user-attachments/assets/e5dac1a3-956e-48ac-9da0-4923b62ca499" width="250" />
   <img src="https://github.com/user-attachments/assets/af56832f-fe5e-434c-a5af-0029947f7b35" width="250" />
   <img src="https://github.com/user-attachments/assets/1437cc13-4782-4d82-af56-a765099e0f92" width="250" />
-  <img src="https://github.com/user-attachments/assets/08416034-4f2e-4bd4-b0af-a697e5e68a20" width="480" />
+  <img src="https://github.com/user-attachments/assets/08416034-4f2e-4bd4-b0af-a697e5e68a20" width="500" />
 </p>
