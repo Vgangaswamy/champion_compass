@@ -37,7 +37,6 @@ git clone https://github.com/Vgangaswamy/champion_compass.git
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a91ff866-5464-44c3-bce2-53ce5328963d" width="250" />
   <img src="https://github.com/user-attachments/assets/1c3a0b3f-6f9d-4c33-a879-656455bc650a" width="250" />
-  <img src="https://github.com/user-attachments/assets/b175eb91-35d3-49a8-9f15-3121d118f241" width="250" />
   <img src="https://github.com/user-attachments/assets/90e1d617-4714-4e5e-9868-198c409b7440" width="250" />
   <img src="https://github.com/user-attachments/assets/c9bb47ec-1e26-4000-a333-088aa5f6a16d" width="250" />
   <img src="https://github.com/user-attachments/assets/dd0b51c8-a8b3-4d0c-9b3c-1127748d80a5" width="250" />
